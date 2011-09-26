@@ -5,12 +5,12 @@ Create bi-directional cross-references in the comments between two different git
 
 Example:
 
-    ghi-xref -s bitly/bitly#123 -t bitly/bitly#456
+    $ ghi-xref -s bitly/bitly#123 -t bitly/bitly#456
     
 You can also have multiple targets:
 
 ```
-$ ruby ghi-xref.rb -s bitly/bitly#123 --target bitly/prototypes#456 bitly/prototypes#789 -m "For the win"
+$ ghi-xref -s bitly/bitly#123 --target bitly/prototypes#456 bitly/prototypes#789 -m "For the win"
 Linking bitly/bitly issue #123 to bitly/prototypes issue #456
    -> ghi -r bitly/bitly comment 123 -m "Cross referencing this issue with bitly/prototypes#456. For the win"
    -> ghi -r bitly/prototypes comment 456 -m "Cross referencing this issue with bitly/bitly#123. For the win"
@@ -19,10 +19,10 @@ Linking bitly/bitly issue #123 to bitly/prototypes issue #789
    -> ghi -r bitly/prototypes comment 789 -m "Cross referencing this issue with bitly/bitly#123. For the win"
 ```
 
-Foo
+Fun
 
 ### Dependencies
 
-This just pipes shit to the command line, so it requires github-cli package to be installed and properly configured.  
+This just pipes shit to the command line, so it requires [github-cli](https://github.com/jsmits/github-cli) package to be installed and properly configured.  
 
 To get that, do `pip install -e git://github.com/jsmits/github-cli.git#egg=github-cli`
