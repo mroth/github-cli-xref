@@ -42,11 +42,11 @@ targets.each do |target|
   
   puts "Linking #{source_repo.green} issue #{"#".red + source_issue.red} to #{target_repo.green} issue #{"#".red + target_issue.red}"
   
-  source_cmd = "ghi -r #{source_repo} comment #{source_issue} -m \"Cross referencing this issue with #{target}.#{msg}\""
+  source_cmd = "ghi -r #{source_repo} comment #{source_issue} -m \"<i>Cross referencing this issue with #{target}.#{msg}</i>\""
   puts "   -> " + source_cmd.white
-  #system(source_cmd)
+  system(source_cmd)
   
-  target_cmd = "ghi -r #{target_repo} comment #{target_issue} -m \"Cross referencing this issue with #{source}.#{msg}\""
+  target_cmd = "ghi -r #{target_repo} comment #{target_issue} -m \"<i>Cross referencing this issue with #{source}.#{msg}</i>\""
   puts "   -> " + target_cmd.white
-  #system(target_cmd)
+  system(target_cmd)
 end
