@@ -21,6 +21,10 @@ Linking bitly/bitly issue #123 to bitly/prototypes issue #789
 
 Fun
 
+### Screenshots (why not?)
+
+![screenshot](https://img.skitch.com/20110926-qw8mhm3gdt9rm3h4kta5a3pq91.png)
+
 ### Dependencies
 
 This just pipes shit to the command line, so it requires [github-cli](https://github.com/jsmits/github-cli) package to be installed and properly configured.  
